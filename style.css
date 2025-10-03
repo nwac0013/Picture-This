@@ -31,21 +31,32 @@ h4 {
 
 /* Responsive image styles */
 picture, .responsive-image {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-  /* image takes half the viewport width */
-  picture img.responsive-image {
-    width: 50vw;
-  }
-
-
-img {
+  /* Make picture and img responsive */
+picture, .responsive-image {
   display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
+/* Desktop layout for square images ≥960px */
+@media (min-width: 960px) {
+  .header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* mage takes half the viewport width */
+  picture img.responsive-image {
+    width: 50vw;
+    height: auto; /* square */
+  }
+}
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
