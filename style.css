@@ -29,6 +29,19 @@ h4 {
   font-weight: 300;
 }
 
+/* Responsive image styles */
+picture, .responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+  /* image takes half the viewport width */
+  picture img.responsive-image {
+    width: 50vw;
+  }
+
+
 img {
   display: block;
 }
